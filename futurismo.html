@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Vanguardas - Futurismo </title>
+    <link rel="stylesheet" href="vanguardas.css">
+    <script>
+
+        const traducoes = {
+			"pt":{
+				"a2": "Vanguardas Européias",
+                "a3": " Cubismo ",
+				"a4": "Dadaísmo",
+                "a5": "Surrealismo",
+                "a6": "Expressionismo",	
+                "p1": "Futurismo",
+                "p2": "Futurismo:",
+                "p3": "O Futurismo foi um movimento artístico e literário que surgiu na Itália no início do século XX, como parte das vanguardas europeias. Fundado pelo poeta italiano Filippo Tommaso Marinetti, o movimento foi oficialmente lançado em 1909 com a publicação do Manifesto Futurista no jornal francês Le Figaro.",
+                "p4": "O início do século XX foi marcado por avanços tecnológicos, industrialização acelerada e tensões políticas que culminariam na Primeira Guerra Mundial. Os futuristas, fascinados por esse cenário, exaltavam a velocidade, a modernidade, as máquinas, a guerra e a energia dinâmica da vida urbana. O movimento se opunha fortemente ao passado e às tradições artísticas, buscando romper com o classicismo e inovar em todas as formas de expressão.",
+                "p5": "Características do Futurismo:",
+                "p6": "Os futuristas, fascinados por esse cenário, exaltavam a velocidade, a modernidade, as máquinas, a guerra e a energia dinâmica da vida urbana. O movimento se opunha fortemente ao passado e às tradições artísticas, buscando romper com o classicismo e inovar em todas as formas de expressão.",
+                "p7": "Exaltação da modernidade: A tecnologia, as máquinas e a velocidade eram elementos centrais da estética futurista.",
+                "p8": "Dinamismo e movimento: Obras de arte e literatura tentavam captar a sensação de deslocamento e energia, frequentemente representando múltiplas fases de um movimento em uma única imagem.",
+                "p9": "Agressividade e provocação: O movimento valorizava a violência, o conflito e a destruição como meios de renovação da sociedade.",
+                "p10": "Uso de cores vibrantes e formas geométricas: Na pintura e escultura, as formas eram fragmentadas e dinâmicas, inspiradas pelo Cubismo.",
+                "p11": "Exaltação da guerra: Os futuristas viam a guerra como uma forma de purificação da sociedade, o que acabou os aproximando do fascismo na Itália.",
+                "p12": "Na arte, o Futurismo destacou-se pela representação do movimento, da velocidade e da energia dinâmica do mundo moderno. Os artistas utilizavam técnicas como a sobreposição de imagens, a fragmentação de formas e as linhas de força, traços dinâmicos que criavam a sensação de ação e ritmo. Obras como *Formas Únicas da Continuidade no Espaço* (1913), de Umberto Boccioni, e *Dinamismo de um Cão na Coleira* (1912), de Giacomo Balla, exemplificam essa estética, com formas fluidas e repetidas que sugerem movimento. As cores vibrantes e composições caóticas refletiam a agitação da vida urbana e industrial.",
+                "p13": "O Futurismo também explorou temas como máquinas, veículos em movimento e a vibração das cidades, sempre celebrando o progresso e a transformação. Artistas como Gino Severini misturavam elementos futuristas e cubistas, enquanto Antonio Sant'Elia propunha projetos arquitetônicos visionários, com estruturas dinâmicas e funcionais.",
+                "p14": "Na literatura, o Futurismo buscou romper com as tradições do passado, defendendo uma linguagem inovadora e dinâmica que refletisse a velocidade e a energia do mundo moderno. Os escritores futuristas, liderados por Filippo Tommaso Marinetti, abandonaram a sintaxe convencional, explorando a liberdade das palavras, a disposição visual dos textos e a sonoridade das frases. Obras como o Manifesto Futurista (1909) e Zang Tumb Tumb (1914), de Marinetti, exemplificam essa estética, com textos que imitam ruídos, movimentos e a fragmentação da realidade. A literatura futurista celebrava a tecnologia, a guerra e a destruição do antigo, propondo uma arte radicalmente nova e conectada ao ritmo acelerado da modernidade.",
+                "p15": "O declínio do Futurismo começou após a Primeira Guerra Mundial, quando muitos de seus ideais, como a glorificação da guerra e da tecnologia, perderam força diante das tragédias e destruições do conflito. A morte de importantes figuras do movimento, como Umberto Boccioni, enfraqueceu ainda mais o grupo. Além disso, o Futurismo foi associado ao fascismo na Itália, especialmente com a aproximação de Marinetti ao regime de Mussolini, o que alienou parte de seus seguidores e críticos. Com o surgimento de novas vanguardas, como o Surrealismo e o Dadaísmo, o Futurismo perdeu relevância, sendo gradualmente superado por correntes artísticas que refletiam melhor as inquietações do pós-guerra. Apesar disso, seu legado influenciou movimentos posteriores, como o Construtivismo e a Arte Cinética.",
+                "t1": "Acervo de Obras Futuristas:",
+                "t2": "Bem-vindo ao Èpoque! Neste site, exploramos as Vanguardas Europeias, apresentando explicações, imagens e textos da época para ajudar a entender o impacto desses movimentos artísticos no contexto histórico e cultural.",
+                "t5": "Desenvolvedores",
+                "t6":"Idioma",
+                "t7":"Nos contate",
+                "t8":"Sobre Nós",
+                "t9":"Alto Contraste",
+                "t10":"Aumentar Fonte",
+                "t11":"Diminuir Fonte",
+                "t12":"Ler Conteúdo",
+                "t13":"Acessibilidade",
+                "b1": "Inglês",
+                "b2":"Português",
+               
+            },
+
+            "en": {
+                "a2": "European Avant-Gardes",
+                "a3": "Cubism",
+                "a4": "Dadaism",
+                "a5": "Surrealism",
+                "a6": "Expressionism",
+                "p1": "Futurism",
+                "p2": "Futurism:",
+                "p3": "Futurism was an artistic and literary movement that emerged in Italy at the beginning of the 20th century as part of the European avant-garde movements. Founded by the Italian poet Filippo Tommaso Marinetti, the movement was officially launched in 1909 with the publication of the Futurist Manifesto in the French newspaper Le Figaro.",
+                "p4": "The early 20th century was marked by technological advances, rapid industrialization, and political tensions that would culminate in World War I. The futurists, fascinated by this scenario, praised speed, modernity, machines, war, and the dynamic energy of urban life. The movement strongly opposed the past and artistic traditions, seeking to break away from classicism and innovate in all forms of expression.",
+                "p5": "Characteristics of Futurism:",
+                "p6": "The futurists, fascinated by this scenario, praised speed, modernity, machines, war, and the dynamic energy of urban life. The movement strongly opposed the past and artistic traditions, seeking to break away from classicism and innovate in all forms of expression.",
+                "p7": "Exaltation of modernity: Technology, machines, and speed were central elements of the Futurist aesthetic.",
+                "p8": "Dynamism and movement: Works of art and literature attempted to capture the feeling of displacement and energy, often representing multiple phases of a movement in a single image.",
+                "p9": "Aggression and provocation: The movement valued violence, conflict, and destruction as means of societal renewal.",
+                "p10": "Use of vibrant colors and geometric forms: In painting and sculpture, forms were fragmented and dynamic, inspired by Cubism.",
+                "p11": "Exaltation of war: The futurists saw war as a form of purification for society, which eventually aligned them with fascism in Italy.",
+                "p12": "In art, Futurism stood out for its representation of movement, speed, and the dynamic energy of the modern world. Artists used techniques such as overlaying images, fragmenting forms, and 'lines of force,' dynamic strokes that created the sensation of action and rhythm. Works like *Unique Forms of Continuity in Space* (1913) by Umberto Boccioni and *Dynamism of a Dog on a Leash* (1912) by Giacomo Balla exemplify this aesthetic, with fluid and repeated forms suggesting movement. Vibrant colors and chaotic compositions reflected the turmoil of urban and industrial life.",
+                "p13": "Futurism also explored themes such as machines, vehicles in motion, and the vibration of cities, always celebrating progress and transformation. Artists like Gino Severini mixed futurist and cubist elements, while Antonio Sant'Elia proposed visionary architectural projects with dynamic and functional structures.",
+                "p14": "In literature, Futurism sought to break with past traditions, advocating for an innovative and dynamic language that reflected the speed and energy of the modern world. Futurist writers, led by Filippo Tommaso Marinetti, abandoned conventional syntax, exploring the freedom of words, the visual arrangement of texts, and the sound of sentences. Works like the Futurist Manifesto (1909) and Zang Tumb Tumb (1914) by Marinetti exemplify this aesthetic, with texts that imitate sounds, movements, and the fragmentation of reality. Futurist literature celebrated technology, war, and the destruction of the old, proposing a radically new art connected to the fast pace of modernity.",
+                "p15": "The decline of Futurism began after World War I, when many of its ideals, such as the glorification of war and technology, lost strength in the face of the tragedies and destruction of the conflict. The death of important figures from the movement, such as Umberto Boccioni, further weakened the group. Additionally, Futurism became associated with fascism in Italy, particularly with Marinetti’s alignment with Mussolini’s regime, which alienated some of its followers and critics. With the rise of new avant-gardes like Surrealism and Dadaism, Futurism lost relevance, gradually being surpassed by artistic movements that better reflected the concerns of the post-war era. Despite this, its legacy influenced later movements like Constructivism and Kinetic Art.",
+                "t1": "Collection of Futurist Works:",
+                "t2": "Welcome to Èpoque! On this site, we explore the European Avant-Gardes, presenting explanations, images, and texts from the era to help understand the impact of these artistic movements in the historical and cultural context.",
+                "t5":"Developers",
+                "t6":"Language",
+                "t7":"Contact us",
+                "t8":"About us",
+                "t9":"High Contrast",
+                "t10":"Enlarge Font",
+                "t11":"Decrease Font",
+                "t12":"Read Content",
+                "t13":"Accessibility",
+                "b1":"English",
+                "b2":"Portuguese",
+
+                
+            }
+		}
+		
+		function mudarIdioma(idioma) {
+			document.getElementById("a2").innerText = traducoes[idioma].a2;
+            document.getElementById("a3").innerText = traducoes[idioma].a3;
+			document.getElementById("a4").innerText = traducoes[idioma].a4;
+            document.getElementById("a5").innerText = traducoes[idioma].a5;
+			document.getElementById("a6").innerText = traducoes[idioma].a6;
+            document.getElementById("p1").innerText = traducoes[idioma].p1;
+            document.getElementById("p2").innerText = traducoes[idioma].p2;
+            document.getElementById("p3").innerText = traducoes[idioma].p3;
+            document.getElementById("p4").innerText = traducoes[idioma].p4;
+            document.getElementById("p5").innerText = traducoes[idioma].p5;
+            document.getElementById("p6").innerText = traducoes[idioma].p6;
+            document.getElementById("p7").innerText = traducoes[idioma].p7;
+            document.getElementById("p8").innerText = traducoes[idioma].p8;
+            document.getElementById("p9").innerText = traducoes[idioma].p9;
+            document.getElementById("p10").innerText = traducoes[idioma].p10;
+            document.getElementById("p11").innerText = traducoes[idioma].p11;
+            document.getElementById("p12").innerText = traducoes[idioma].p12;
+            document.getElementById("p13").innerText = traducoes[idioma].p13;
+            document.getElementById("p14").innerText = traducoes[idioma].p14;
+            document.getElementById("p15").innerText = traducoes[idioma].p15;
+            document.getElementById("t1").innerText = traducoes[idioma].t1;
+            document.getElementById("t2").innerText = traducoes[idioma].t2;
+            document.getElementById("t5").innerText = traducoes[idioma].t5;
+            document.getElementById("t6").innerText = traducoes[idioma].t6;
+            document.getElementById("t7").innerText = traducoes[idioma].t7;
+            document.getElementById("t8").innerText = traducoes[idioma].t8;
+            document.getElementById("t9").innerText = traducoes[idioma].t9;
+            document.getElementById("t10").innerText = traducoes[idioma].t10;
+            document.getElementById("t11").innerText = traducoes[idioma].t11;
+            document.getElementById("t12").innerText = traducoes[idioma].t12;
+            document.getElementById("t13").innerText = traducoes[idioma].t13;
+            document.getElementById("b1").innerText = traducoes[idioma].b1;
+            document.getElementById("b2").innerText = traducoes[idioma].b2;
+            
+		}
+
+
+        // Alterar contraste
+    document.getElementById('contraste-btn').addEventListener('click', function () {
+        document.body.classList.toggle('auto-contraste');
+        boxs = document.getElementsByClassName('box');
+        for(box of boxs){
+            if(box.style.backgroundColor == ""){
+                box.style.color = "yellow";
+                box.style.backgroundColor = "black";
+            }
+            else if(box.style.backgroundColor == "black"){
+                box.style.color = "black";
+                box.style.backgroundColor = "white";
+            }
+            else if(box.style.backgroundColor == "white"){
+                box.style.color = "yellow";
+                box.style.backgroundColor = "black";
+            }   
+        }
+    });
+
+
+
+    // Aumentar fonte
+    document.getElementById('aumentar-fonte-btn').addEventListener('click', function () {
+        document.body.classList.add('aumentar-fonte');
+        document.body.classList.remove('diminuir-fonte');
+    });
+
+    // Diminuir fonte
+    document.getElementById('diminuir-fonte-btn').addEventListener('click', function () {
+        document.body.classList.add('diminuir-fonte');
+        document.body.classList.remove('aumentar-fonte');
+    });
+
+
+
+    //ler conteudo
+    document.getElementById('ler-conteudo-btn').addEventListener('click',function(){
+        const texto = document.body.innerText;
+        const falante = new SpeechSynthesisUtterance(texto);
+        falante.lang = 'pt-BR';
+        falante.volume = 1;
+        falante.rate = 1;
+        falante.pitch = 0;
+        speechSynthesis.speak(falante)
+    });
+
+
+
+
+    </script>
+</head>
+<body>
+    <nav class="cor">
+        <br/><br/>
+       <img class="logo" src="logo.png">
+       <br/><br/>
+    </nav>
+    <main>
+        <img class="imagenscima" src="vann.jpg" width="100%";>  
+    </main>
+    <body>
+ 
+        <div class="breadcrumb">
+         <a href="vanguardas.html" id="a2">
+          Vanguardas Européias
+         </a>
+         <span>
+          &gt;
+         </span>
+        <a href="cubismo.html" id="a3">
+           Cubismo 
+        </a>
+        <span>
+            &gt;
+           </span>
+          <a href="dadaismo.html" id="a4">
+             Dadaísmo
+          </a>
+          <span>
+            &gt;
+           </span>
+          <a href="surrealismo.html"id="a5">
+             Surrealismo
+          </a>
+          <span>
+            &gt;
+           </span>
+           <a href="expressionismo.html"id="a6">
+            Expressionismo
+           </a>
+           <span>
+            &gt;
+           </span>
+          <a href="futurismo.html" id="p1">
+             Futurismo
+          </a>
+        </div>
+</body>
+<article class="box">
+    <div >
+        <p class="movimentotitulo"id="p2"> Futurismo: </p>
+        </div><br/>
+        <p id="p3" class="textoconteudo">O Futurismo foi um movimento artístico e literário que surgiu na Itália no início do século XX, como parte das vanguardas europeias. Fundado pelo poeta italiano Filippo Tommaso Marinetti, o movimento foi oficialmente lançado em 1909 com a publicação do Manifesto Futurista no jornal francês Le Figaro.</p>
+
+        <p id="p4" class="textoconteudo"> O início do século XX foi marcado por avanços tecnológicos, industrialização acelerada e tensões políticas que culminariam na Primeira Guerra Mundial. Os futuristas, fascinados por esse cenário, exaltavam a velocidade, a modernidade, as máquinas, a guerra e a energia dinâmica da vida urbana. O movimento se opunha fortemente ao passado e às tradições artísticas, buscando romper com o classicismo e inovar em todas as formas de expressão.</p>
+        
+        <p class="textoconteudo" id="p5">Características do Futurismo:</p> 
+        <p id="p6" class="textoconteudo">Os futuristas, fascinados por esse cenário, exaltavam a velocidade, a modernidade, as máquinas, a guerra e a energia dinâmica da vida urbana. O movimento se opunha fortemente ao passado e às tradições artísticas, buscando romper com o classicismo e inovar em todas as formas de expressão.</p>
+    
+        <p class="textoconteudo">  
+            <ul class="lista">
+                <li id="p7">Exaltação da modernidade: A tecnologia, as máquinas e a velocidade eram elementos centrais da estética futurista.</li>
+                <li id="p8">Dinamismo e movimento: Obras de arte e literatura tentavam captar a sensação de deslocamento e energia, frequentemente representando múltiplas fases de um movimento em uma única imagem.</li>
+                <li id="p9">Agressividade e provocação: O movimento valorizava a violência, o conflito e a destruição como meios de renovação da sociedade.</li>
+                <li id="p10">Uso de cores vibrantes e formas geométricas: Na pintura e escultura, as formas eram fragmentadas e dinâmicas, inspiradas pelo Cubismo. </li>
+                <li id="p11">Exaltação da guerra: Os futuristas viam a guerra como uma forma de purificação da sociedade, o que acabou os aproximando do fascismo na Itália. </li>
+            </ul>
+        </p>
+        <p id="p12" class="textoconteudo">Na arte, o Futurismo destacou-se pela representação do movimento, da velocidade e da energia dinâmica do mundo moderno. Os artistas utilizavam técnicas como a sobreposição de imagens, a fragmentação de formas e as "linhas de força", traços dinâmicos que criavam a sensação de ação e ritmo. Obras como *Formas Únicas da Continuidade no Espaço* (1913), de Umberto Boccioni, e *Dinamismo de um Cão na Coleira* (1912), de Giacomo Balla, exemplificam essa estética, com formas fluidas e repetidas que sugerem movimento. As cores vibrantes e composições caóticas refletiam a agitação da vida urbana e industrial.</p>
+
+           <p id="p13" class="textoconteudo"> O Futurismo também explorou temas como máquinas, veículos em movimento e a vibração das cidades, sempre celebrando o progresso e a transformação. Artistas como Gino Severini misturavam elementos futuristas e cubistas, enquanto Antonio Sant'Elia propunha projetos arquitetônicos visionários, com estruturas dinâmicas e funcionais. </p>
+        
+            <p id="p14" class="textoconteudo"> Na literatura, o Futurismo buscou romper com as tradições do passado, defendendo uma linguagem inovadora e dinâmica que refletisse a velocidade e a energia do mundo moderno. Os escritores futuristas, liderados por Filippo Tommaso Marinetti, abandonaram a sintaxe convencional, explorando a liberdade das palavras, a disposição visual dos textos e a sonoridade das frases. Obras como o Manifesto Futurista (1909) e Zang Tumb Tumb (1914), de Marinetti, exemplificam essa estética, com textos que imitam ruídos, movimentos e a fragmentação da realidade. A literatura futurista celebrava a tecnologia, a guerra e a destruição do antigo, propondo uma arte radicalmente nova e conectada ao ritmo acelerado da modernidade. </p>
+            <p id="p15" class="textoconteudo">O declínio do Futurismo começou após a Primeira Guerra Mundial, quando muitos de seus ideais, como a glorificação da guerra e da tecnologia, perderam força diante das tragédias e destruições do conflito. A morte de importantes figuras do movimento, como Umberto Boccioni, enfraqueceu ainda mais o grupo. Além disso, o Futurismo foi associado ao fascismo na Itália, especialmente com a aproximação de Marinetti ao regime de Mussolini, o que alienou parte de seus seguidores e críticos. Com o surgimento de novas vanguardas, como o Surrealismo e o Dadaísmo, o Futurismo perdeu relevância, sendo gradualmente superado por correntes artísticas que refletiam melhor as inquietações do pós-guerra. Apesar disso, seu legado influenciou movimentos posteriores, como o Construtivismo e a Arte Cinética.</p>
+        
+            <br/><br/>
+    </article>
+<article>
+    <p id="t1" class="movimentotitulo"> Acervo de Obras Futuristas: </p>
+
+    <div class="product-row">
+        <div class="product-container">
+            <img class="product-itens" src="img13.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img14.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img15.png">
+        </div>
+ </div>
+     <div class="product-row">
+        <div class="product-container">
+            <img class="product-itens" src="img16.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img17.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img18.png">
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="container">
+        <ul class="rodape">
+            <img class="logo_rodape"src="logo.png" alt="logo" width="125" height="50">
+            <p id="t2"> Bem-vindo ao Èpoque! Neste site, exploramos as Vanguardas Europeias, apresentando explicações, imagens e textos da época para ajudar a entender o impacto desses movimentos artísticos no contexto histórico e cultural. </p>
+            <br />
+            <p>© 2025 Èpoque. <br>Todos os direitos reservados.</p>
+        </ul>
+        <ul>
+            <h3 id="t5">Desenvolvedores</h3>
+            <li class="aqui"><a href="https://www.instagram.com/bia_talamoni/" target="_blank"> Bianca</a></li>
+            <li class="aqui"><a href="https://www.instagram.com/l.m.breda/" target="_blank"> Gabriel Faria</a></li>
+            <li class="aqui"><a href="https://www.instagram.com/loregncalo/" target="_blank"> Murilo</a></li>
+            <li class="aqui"><a href="https://www.instagram.com/sophiaocarneiro/" target="_blank"> Sophia</a></li>
+            
+            <h3 id="t6">Idioma</h3>
+            <button id="b1" class="teste" onclick="mudarIdioma('en')">Inglês</button>
+            <button id="b2" class="teste" onclick="mudarIdioma('pt')">Português</button>
+        </ul>
+        <ul>
+            <h3 id="t7">Nos Contate</h3>
+            <li>
+                <p>+55 19 99336-1724</p>
+            </li>
+            <li>
+               <a id= "t8" href="sobrenos.html" target="_blank">Sobre Nós</a> 
+            </li>
+            <h3 id="t13">Acessibilidade</h3>
+            <button id="t9" class="teste" id="contraste-btn" aria-label="Alterar Contraste">Alto Contraste</button><br/>
+            <button id="t10" class="teste" id="aumentar-fonte-btn" aria-label="Aumentar Fonte">Aumentar Fonte</button><br/>
+            <button id="t11" class="teste"id="diminuir-fonte-btn" aria-label="Diminuir Fonte">Diminuir Fonte</button><br/>
+            <button id="t12" class="teste"id="ler-conteudo-btn" aria-label="Ler Conteúdo">Ler Conteúdo</button><br/>
+        </ul>
+        
+
+    </div>
+</footer>
+</body>
+
+</html>

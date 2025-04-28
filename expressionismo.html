@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title id="a1"> Vanguardas </title>
+    <link rel="stylesheet" href="vanguardas.css">
+    <script>
+ const traducoes = {
+			"pt":{
+				"a2": "Vanguardas Européias",
+                "a3": "Cubismo",
+				"a4": "Dadaísmo ",
+                "a5": "Surrealismo",
+                "a6": "Expressionismo ",	
+                "p1": "Futurismo",
+                "p2": "Expressionismo:",
+                "p3": "O Expressionismo foi um movimento artístico e literário que surgiu na Alemanha entre 1905 e 1930, caracterizando-se pela expressão intensa das emoções, pela subjetividade e pela distorção da realidade. Em resposta à crescente industrialização e ao caos social da época, os artistas buscavam transmitir sentimentos profundos como angústia, medo e solidão, utilizando cores vibrantes, formas exageradas e traços irregulares. Rejeitando a representação objetiva da realidade, o movimento enfatizava a expressão subjetiva e emocional, explorando temáticas psicológicas profundas para traduzir a inquietação interior do ser humano.",
+                "p4": "O Expressionismo teve origem na Alemanha, influenciado por artistas pós-impressionistas como Vincent van Gogh e simbolistas como Edvard Munch. Dois grupos foram fundamentais para sua consolidação: o Die Brücke (A Ponte), que buscava romper com a tradição acadêmica e enfatizava a crítica à modernidade por meio de traços agressivos e cores intensas; e o Der Blaue Reiter (O Cavaleiro Azul), que explorava a espiritualidade e o uso simbólico das cores. Ambos compartilhavam o desejo de expressar a subjetividade humana, abordando temas como solidão, sofrimento e o caos da vida urbana.",
+                "p5": "O Expressionismo se manifestou de diversas formas na pintura, no cinema, na literatura e no teatro, apresentando características marcantes: ",
+                "p6": "Uso de cores fortes e contrastantes para transmitir emoções intensas.",
+                "p7": "Formas distorcidas e traços irregulares, que acentuavam a sensação de inquietação e desconforto.",
+                "p8": "Temáticas psicológicas profundas, explorando angústia, alienação, solidão e conflitos existenciais.",
+                "p9": "Influência do subconsciente e do irracional, especialmente no Expressionismo tardio, próximo ao Surrealismo.",
+                "p10": "Crítica à modernidade e à sociedade industrial, denunciando a alienação e o sofrimento humano.",
+                "p11": "O Expressionismo influenciou diversas áreas da arte, como a pintura, a literatura e o cinema. Na pintura, artistas como Edvard Munch, Wassily Kandinsky e Ernst Ludwig Kirchner retrataram emoções intensas por meio de composições impactantes. Obras como O Grito, de Munch, tornaram-se ícones do movimento, refletindo o desespero e a inquietação do indivíduo moderno. No cinema, filmes como O Gabinete do Dr. Caligari e Nosferatu exploraram cenários sombrios e distorcidos, reforçando a estética expressionista. Na literatura, escritores como Franz Kafka incorporaram em suas narrativas o sentimento de alienação e absurdo da existência.",
+                "p12": "O movimento entrou em declínio com a ascensão do nazismo na década de 1930, sendo classificado como arte degenerada e duramente reprimido. Apesar disso, sua influência se manteve viva em movimentos posteriores, como o Surrealismo e a Arte Abstrata, além de deixar um legado significativo no cinema, na literatura e na cultura visual contemporânea. O Expressionismo permanece como uma das expressões mais marcantes da arte moderna, traduzindo, de maneira visceral e impactante, as inquietações do ser humano.",
+                "p13": "Acervo de Obras Expressionistas:",
+                "p14": "Bem-vindo ao Èpoque! Neste site, exploramos as Vanguardas Europeias, apresentando explicações, imagens e textos da época para ajudar a entender o impacto desses movimentos artísticos no contexto histórico e cultural.",
+                "t1": "Desenvolvedores",
+                "t2": "Idioma",
+                "t3": "Nos Contate",
+                "t4": "Sobre Nós",
+                "t5": "Acessibilidade:",
+                "b1": "Inglês",
+                "b2":"Português",
+            },
+
+            "en":{
+                "a2": "European Avant-Gardes",
+                "a3": "Cubism",
+                "a4": "Dadaism",
+                "a5": "Surrealism",
+                "a6": "Expressionism",
+                "p1": "Futurism",
+                "p2": "Expressionism:",
+                "p3": "Expressionism was an artistic and literary movement that emerged in Germany between 1905 and 1930, characterized by the intense expression of emotions, subjectivity, and the distortion of reality. In response to the growing industrialization and social chaos of the time, artists sought to convey deep feelings such as anguish, fear, and loneliness, using vibrant colors, exaggerated forms, and irregular strokes. Rejecting the objective representation of reality, the movement emphasized subjective and emotional expression, exploring profound psychological themes to translate the inner unrest of the human being.",
+                "p4": "Expressionism originated in Germany, influenced by post-impressionist artists like Vincent van Gogh and symbolists like Edvard Munch. Two groups were fundamental to its consolidation: Die Brücke (The Bridge), which sought to break away from academic tradition and emphasized criticism of modernity through aggressive strokes and intense colors; and Der Blaue Reiter (The Blue Rider), which explored spirituality and the symbolic use of colors. Both shared the desire to express human subjectivity, addressing themes such as loneliness, suffering, and the chaos of urban life.",
+                "p5": "Expressionism manifested itself in various forms in painting, cinema, literature, and theater, presenting striking characteristics:",
+                "p6": "Use of strong and contrasting colors to convey intense emotions.",
+                "p7": "Distorted forms and irregular strokes, accentuating the feeling of restlessness and discomfort.",
+                "p8": "Profound psychological themes, exploring anguish, alienation, loneliness, and existential conflicts.",
+                "p9": "Influence of the subconscious and the irrational, especially in late Expressionism, close to Surrealism.",
+                "p10": "Criticism of modernity and industrial society, denouncing alienation and human suffering.",
+                "p11": "Expressionism influenced several areas of art, such as painting, literature, and cinema. In painting, artists like Edvard Munch, Wassily Kandinsky, and Ernst Ludwig Kirchner portrayed intense emotions through impactful compositions. Works like The Scream by Munch became icons of the movement, reflecting the despair and unrest of the modern individual. In cinema, films like The Cabinet of Dr. Caligari and Nosferatu explored dark and distorted settings, reinforcing the Expressionist aesthetic. In literature, writers like Franz Kafka incorporated the feelings of alienation and the absurdity of existence into their narratives.",
+                "p12": "The movement declined with the rise of Nazism in the 1930s, being classified as degenerate art and harshly repressed. Nevertheless, its influence remained alive in later movements, such as Surrealism and Abstract Art, and left a significant legacy in cinema, literature, and contemporary visual culture. Expressionism remains one of the most striking expressions of modern art, viscerally and impactfully translating the human being’s inner anxieties.",
+                "p13": "Collection of Expressionist Works:",
+                "p14": "Welcome to Èpoque! On this site, we explore the European Avant-Gardes, presenting explanations, images, and period texts to help understand the impact of these artistic movements in their historical and cultural context.",
+                "t1": "Developers",
+                "t2": "Language",
+                "t3": "Contact Us",
+                "t4": "About Us",
+                "t5": "Accessibility:",
+                "b1":"English",
+                "b2":"Portuguese",
+
+},
+
+            };
+
+    </script>
+</head>
+<body>
+    <nav class="cor">
+        <br/><br/>
+       <img class="logo" src="logo.png">
+       <br/><br/>
+    </nav>
+    <main>
+        <img class="imagenscima" src="vann.jpg" width="100%";>  
+    </main>
+    <body>
+ 
+        <div class="breadcrumb">
+         <a href="vanguardas.html" id="a2">
+          Vanguardas Européias
+         </a>
+         <span>
+          &gt;
+         </span>
+         <a href="cubismo.html" id="a3">
+          Cubismo
+         </a>
+         <span>
+          &gt;
+         </span>
+        <a href="dadaismo.html" id="a4">
+           Dadaísmo 
+        </a>
+        <span>
+            &gt;
+           </span>
+          <a href="surrealismo.html" id="a5">
+             Surrealismo
+          </a>
+          <span>
+            &gt;
+           </span>
+          <a href="expressionismo.html" id="a6">
+             Expressionismo 
+          </a>
+          <span>
+            &gt;
+           </span>
+          <a href="futurismo.html" id="p1">
+             Futurismo
+          </a>
+        </div>
+</body>
+<article class="box">
+    <div >
+        <p id="p2" class="movimentotitulo"> Expressionismo: </p>
+    </div><br/>
+        <p id="p3" class="textoconteudo"> O Expressionismo foi um movimento artístico e literário que surgiu na Alemanha entre 1905 e 1930, caracterizando-se pela expressão intensa das emoções, pela subjetividade e pela distorção da realidade. Em resposta à crescente industrialização e ao caos social da época, os artistas buscavam transmitir sentimentos profundos como angústia, medo e solidão, utilizando cores vibrantes, formas exageradas e traços irregulares. Rejeitando a representação objetiva da realidade, o movimento enfatizava a expressão subjetiva e emocional, explorando temáticas psicológicas profundas para traduzir a inquietação interior do ser humano. </p>
+        
+        <p id="p4" class="textoconteudo">O Expressionismo teve origem na Alemanha, influenciado por artistas pós-impressionistas como Vincent van Gogh e simbolistas como Edvard Munch. Dois grupos foram fundamentais para sua consolidação: o Die Brücke ("A Ponte"), que buscava romper com a tradição acadêmica e enfatizava a crítica à modernidade por meio de traços agressivos e cores intensas; e o Der Blaue Reiter ("O Cavaleiro Azul"), que explorava a espiritualidade e o uso simbólico das cores. Ambos compartilhavam o desejo de expressar a subjetividade humana, abordando temas como solidão, sofrimento e o caos da vida urbana.</p>
+    
+        <p id="p5" class="textoconteudo"> O Expressionismo se manifestou de diversas formas na pintura, no cinema, na literatura e no teatro, apresentando características marcantes: 
+            <ul class="lista">
+                <li id="p6">Uso de cores fortes e contrastantes para transmitir emoções intensas. </li>
+                <li id="p7">Formas distorcidas e traços irregulares, que acentuavam a sensação de inquietação e desconforto. </li>
+                <li id="p8">Temáticas psicológicas profundas, explorando angústia, alienação, solidão e conflitos existenciais.</li>
+                <li id="p9">Influência do subconsciente e do irracional, especialmente no Expressionismo tardio, próximo ao Surrealismo. </li>
+                <li id="p10">Crítica à modernidade e à sociedade industrial, denunciando a alienação e o sofrimento humano. </li>
+            </ul>
+        </p>
+        <p id="p11" class="textoconteudo"> O Expressionismo influenciou diversas áreas da arte, como a pintura, a literatura e o cinema. Na pintura, artistas como Edvard Munch, Wassily Kandinsky e Ernst Ludwig Kirchner retrataram emoções intensas por meio de composições impactantes. Obras como O Grito, de Munch, tornaram-se ícones do movimento, refletindo o desespero e a inquietação do indivíduo moderno. No cinema, filmes como O Gabinete do Dr. Caligari e Nosferatu exploraram cenários sombrios e distorcidos, reforçando a estética expressionista. Na literatura, escritores como Franz Kafka incorporaram em suas narrativas o sentimento de alienação e absurdo da existência.</p>
+        <p id="p12" class="textoconteudo"> O movimento entrou em declínio com a ascensão do nazismo na década de 1930, sendo classificado como "arte degenerada" e duramente reprimido. Apesar disso, sua influência se manteve viva em movimentos posteriores, como o Surrealismo e a Arte Abstrata, além de deixar um legado significativo no cinema, na literatura e na cultura visual contemporânea. O Expressionismo permanece como uma das expressões mais marcantes da arte moderna, traduzindo, de maneira visceral e impactante, as inquietações do ser humano.</p>
+        <br/><br/>
+    </article>
+<article>
+    <p id="p13"class="movimentotitulo"> Acervo de Obras Expressionistas: </p>
+    <div class="product-row">
+        <div class="product-container">
+            <img class="product-itens" src="img1.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img2.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img3.png">
+        </div>
+     </div>
+     <div class="product-row">
+        <div class="product-container">
+            <img class="product-itens" src="img4.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img5.png">
+        </div>
+        <div class="product-container">
+            <img class="product-itens" src="img6.png">
+        </div>
+    </div>
+</article>
+</body>
+<footer>
+    <div class="container">
+        <ul class="rodape">
+            <img class="logo_rodape"src="logo.png" alt="logo" width="125" height="50">
+            <p id="p14">Bem-vindo ao Èpoque! Neste site, exploramos as Vanguardas Europeias, apresentando explicações, imagens e textos da época para ajudar a entender o impacto desses movimentos artísticos no contexto histórico e cultural. </p>
+            <br />
+            <p>© 2025 Èpoque. <br>Todos os direitos reservados.</p>
+        </ul>
+        <ul>
+            <h3 id="t1">Desenvolvedores</h3>
+            <li class="aqui"><a href="https://www.instagram.com/bia_talamoni/" target="_blank"> Bianca</a></li>
+            <li class="aqui"><a href="https://www.instagram.com/l.m.breda/" target="_blank"> Gabriel Faria</a></li>
+            <li class="aqui"><a href="https://www.instagram.com/loregncalo/" target="_blank"> Murilo</a></li>
+            <li class="aqui"><a href="https://www.instagram.com/sophiaocarneiro/" target="_blank"> Sophia</a></li>
+            
+                <h3 id="t2">Idioma</h3>
+                <button id="b1" class="teste" onclick="mudarIdioma('en')">Inglês</button>
+            <button id="b2" class="teste" onclick="mudarIdioma('pt')">Português</button>
+        </ul>
+        <ul>
+            <h3 id="t3">Nos Contate</h3>
+            <li>
+                <p>+55 19 99336-1724</p>
+            </li>
+            <li>
+               <a id="t4" href="sobrenos.html" target="_blank">Sobre Nós</a> 
+            </li>
+            <h3 id="t5">Acessibilidade</h3>
+            <button id="t6" class="teste" id="contraste-btn" aria-label="Alterar Contraste">Alto Contraste</button><br/>
+            <button id="t7"class="teste" id="aumentar-fonte-btn" aria-label="Aumentar Fonte">Aumentar Fonte</button><br/>
+            <button id="t8"class="teste"id="diminuir-fonte-btn" aria-label="Diminuir Fonte">Diminuir Fonte</button><br/>
+            <button id="t9"class="teste"id="ler-conteudo-btn" aria-label="Ler Conteúdo">Ler Conteúdo</button><br/>
+        </ul>
+
+        <script>
+            // Alterar contraste
+            document.getElementById('contraste-btn').addEventListener('click', function () {
+                document.body.classList.toggle('auto-contraste');
+                boxs = document.getElementsByClassName('box');
+                for(box of boxs){
+                    if(box.style.backgroundColor == ""){
+                        box.style.color = "yellow";
+                        box.style.backgroundColor = "black";
+                    }
+                    else if(box.style.backgroundColor == "black"){
+                        box.style.color = "black";
+                        box.style.backgroundColor = "white";
+                    }
+                    else if(box.style.backgroundColor == "white"){
+                        box.style.color = "yellow";
+                        box.style.backgroundColor = "black";
+                    }   
+                }
+            });
+        
+        
+        
+            // Aumentar fonte
+            document.getElementById('aumentar-fonte-btn').addEventListener('click', function () {
+                document.body.classList.add('aumentar-fonte');
+                document.body.classList.remove('diminuir-fonte');
+            });
+        
+            // Diminuir fonte
+            document.getElementById('diminuir-fonte-btn').addEventListener('click', function () {
+                document.body.classList.add('diminuir-fonte');
+                document.body.classList.remove('aumentar-fonte');
+            });
+        
+        
+        
+            //ler conteudo
+            document.getElementById('ler-conteudo-btn').addEventListener('click',function(){
+                const texto = document.body.innerText;
+                const falante = new SpeechSynthesisUtterance(texto);
+                falante.lang = 'pt-BR';
+                falante.volume = 1;
+                falante.rate = 1;
+                falante.pitch = 0;
+                speechSynthesis.speak(falante)
+            })
+   
+            function mudarIdioma(idioma) {
+            document.getElementById("a2").innerText = traducoes[idioma].a2;
+            document.getElementById("a3").innerText = traducoes[idioma].a3;
+			document.getElementById("a4").innerText = traducoes[idioma].a4;
+            document.getElementById("a5").innerText = traducoes[idioma].a5;
+			document.getElementById("a6").innerText = traducoes[idioma].a6;
+            document.getElementById("p1").innerText = traducoes[idioma].p1;
+            document.getElementById("p2").innerText = traducoes[idioma].p2;
+            document.getElementById("p3").innerText = traducoes[idioma].p3;
+            document.getElementById("p4").innerText = traducoes[idioma].p4;
+            document.getElementById("p5").innerText = traducoes[idioma].p5;
+            document.getElementById("p6").innerText = traducoes[idioma].p6;
+            document.getElementById("p7").innerText = traducoes[idioma].p7;
+            document.getElementById("p8").innerText = traducoes[idioma].p8;
+            document.getElementById("p9").innerText = traducoes[idioma].p9;
+            document.getElementById("p10").innerText = traducoes[idioma].p10;
+            document.getElementById("p11").innerText = traducoes[idioma].p11;
+            document.getElementById("p12").innerText = traducoes[idioma].p12;
+            document.getElementById("p13").innerText = traducoes[idioma].p13;
+            document.getElementById("p14").innerText = traducoes[idioma].p14;
+            document.getElementById("t1").innerText = traducoes[idioma].t1;
+            document.getElementById("t2").innerText = traducoes[idioma].t2;
+            document.getElementById("t3").innerText = traducoes[idioma].t3;
+            document.getElementById("t4").innerText = traducoes[idioma].t4;
+            document.getElementById("t5").innerText = traducoes[idioma].t5;
+            document.getElementById("b1").innerText = traducoes[idioma].b1;
+            document.getElementById("b2").innerText = traducoes[idioma].b2;
+		}
+	
+        </script>
+    </div>
+</footer>
+</html>

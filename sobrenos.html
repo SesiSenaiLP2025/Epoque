@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="vanguardas.css">
+</head>
+<body>
+    <header class="headersobrenos">
+        <img class="logo_rodape"src="logo.png" alt="logo" width="160" height="65">
+    </header>
+    <section class="sobrenos">
+        <div class="contentsobrenos">
+            <h2 id="a1">Sobre Nós</h2>
+            <p id="a2">A Èpoque é uma empresa inovadora focada na transformação da educação por meio de tecnologia e metodologias de ensino disruptivas. Com uma abordagem dinâmica e centrada no aluno, desenvolvemos soluções que unem inteligência artificial, realidade aumentada e gamificação para potencializar a aprendizagem. Nossa missão é preparar estudantes e profissionais para os desafios do futuro, promovendo um ensino acessível, personalizado e de alta qualidade. Pioneiros na criação de novas formas de aprender, seguimos na vanguarda da educação, impulsionando a evolução do conhecimento.</p>
+    </section>
+        <h2 id="a3" style="text-align: center;" >Onde estamos localizados!</h2>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        #map{
+            height: 50vh;
+}
+    </style>
+    </head>
+    <body>
+    <div id="map"></div>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            //Função para criar o mapa
+            function showMap(latitude,longitude){
+                //Cria o mapa com a localização atual
+                    var map = L.map('map').setView([ latitude,longitude],13);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution: 'openstreetmap'}).addTo(map);
+
+                //Add o pin da localização
+                L.marker([latitude,longitude]).addTo(map).bindPopup('Estamos aqui!').openPopup;
+            }
+            //Função para ter a loc atual
+            function getLocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition
+                        (function(position){
+                            var latitude = position.coords.latitude;
+                            var longitude = position.coords.longitude;
+                            showMap(latitude,longitude);
+                        },function(erro){
+                            alert("erro");
+                });
+                }else{alert("localização não suportada!");}
+            }
+            getLocation();
+            </script>
+        </body>
+        <footer>
+        <div class="container">
+            <ul class="rodape">
+                <img class="logo_rodape"src="logo.png" alt="logo" width="125" height="50">
+                <p id="t21">Bem-vindo ao Èpoque! Neste site, exploramos as Vanguardas Europeias, apresentando explicações, imagens e textos da época para ajudar a entender o impacto desses movimentos artísticos no contexto histórico e cultural. </p>
+                <br />
+                <p>© 2025 Èpoque. <br>Todos os direitos reservados.</p>
+            </ul>
+            <ul>
+                <h3 id="f0">Desenvolvedores</h3>
+                <li class="aqui"><a href="https://www.instagram.com/sophiaocarneiro/" target="_blank"> Ana Livia</a></li>
+                <li class="aqui"><a href="https://www.instagram.com/bia_talamoni/" target="_blank"> Bianca</a></li>
+                <li class="aqui"><a href="https://www.instagram.com/l.m.breda/" target="_blank"> Gabriel Faria</a></li>
+                <li class="aqui"><a href="https://www.instagram.com/loregncalo/" target="_blank"> Murilo</a></li>
+                <li class="aqui"><a href="https://www.instagram.com/sophiaocarneiro/" target="_blank"> Sophia</a></li>
+
+
+                <h3 id="f2">Idioma</h3>
+                <button id="b1" class="teste" onclick="mudarIdioma('en')">Inglês</button>
+                <button id="b2" class="teste" onclick="mudarIdioma('pt')">Português</button>
+    
+            </ul>
+            <ul>
+                <h3 id="f3">Nos Contate</h3>
+                <li>
+                    <p>+55 19 99336-1724</p>
+                </li>
+                <li>
+                    <a id="f1" href="vanguardas.html" target="_blank">Vanguardas Européias</a> 
+                 </li>
+                 <h3 id="f4" >Acessibilidade</h3>
+                 <button class="teste" id="contraste-btn" aria-label="Alterar Contraste">Alto Contraste</button><br/>
+                 <button class="teste" id="aumentar-fonte-btn" aria-label="Aumentar Fonte">Aumentar Fonte</button><br/>
+                 <button class="teste"id="diminuir-fonte-btn" aria-label="Diminuir Fonte">Diminuir Fonte</button><br/>
+                 <button class="teste"id="ler-conteudo-btn" aria-label="Ler Conteúdo">Ler Conteúdo</button><br/>
+             </ul>
+                <script>
+                    // Alterar contraste
+                    document.getElementById('contraste-btn').addEventListener('click', function () {
+                        document.body.classList.toggle('auto-contraste');
+                    });
+                
+                
+                
+                    // Aumentar fonte
+                    document.getElementById('aumentar-fonte-btn').addEventListener('click', function () {
+                        document.body.classList.add('aumentar-fonte');
+                        document.body.classList.remove('diminuir-fonte');
+                    });
+                
+                    // Diminuir fonte
+                    document.getElementById('diminuir-fonte-btn').addEventListener('click', function () {
+                        document.body.classList.add('diminuir-fonte');
+                        document.body.classList.remove('aumentar-fonte');
+                    });
+                
+                
+                
+                    //ler conteudo
+                    document.getElementById('ler-conteudo-btn').addEventListener('click',function(){
+                        const texto = document.body.innerText;
+                        const falante = new SpeechSynthesisUtterance(texto);
+                        falante.lang = 'pt-BR';
+                        falante.volume = 1;
+                        falante.rate = 1;
+                        falante.pitch = 0;
+                        speechSynthesis.speak(falante)
+                    })
+
+
+
+
+
+                    const traducoes = {
+                "pt":{
+                    "a1": "Sobre Nós",
+                    "a2": "A Èpoque é uma empresa inovadora focada na transformação da educação por meio de tecnologia e metodologias de ensino disruptivas. Com uma abordagem dinâmica e centrada no aluno, desenvolvemos soluções que unem inteligência artificial, realidade aumentada e gamificação para potencializar a aprendizagem. Nossa missão é preparar estudantes e profissionais para os desafios do futuro, promovendo um ensino acessível, personalizado e de alta qualidade. Pioneiros na criação de novas formas de aprender, seguimos na vanguarda da educação, impulsionando a evolução do conhecimento.",
+                    "a3": "Onde estamos localizados!",
+                    "t21": "Bem-vindo ao Èpoque! Neste site, exploramos as Vanguardas Europeias, apresentando explicações, imagens e textos da época para ajudar a entender o impacto desses movimentos artísticos no contexto histórico e cultural.",
+                    "f0":"Desenvolvedores",
+                    "f1":"Vanguardas Européias",
+                    "f2":"Idioma",
+                    "f3":"Nos Contate",
+                    "f4":"Acessibilidade",
+                },
+
+                "en":{
+                    "a1": "About Us",
+                    "a2": "Èpoque is an innovative company focused on transforming education through technology and disruptive teaching methodologies. With a dynamic and student-centered approach, we develop solutions that combine artificial intelligence, augmented reality and gamification to enhance learning. Our mission is to prepare students and professionals for the challenges of the future by promoting accessible, personalized and high-quality education. Pioneers in creating new ways of learning, we remain at the forefront of education, driving the evolution of knowledge.",
+                    "a3": "Where are we located!",
+                    "t21": "Welcome to Èpoque! On this site, we explore the European Avant-Garde, presenting explanations, images and texts from the period to help understand the impact of these artistic movements in historical and cultural context.",
+                    "f0":"Developers",
+                    "f1":"European Vanguards",
+                    "f2":"Language",
+                    "f3":"Contact Us",
+                    "f4":"Accessibility",
+                }
+            }
+            
+
+
+            function mudarIdioma(idioma) {
+                document.getElementById("a1").innerText = traducoes[idioma].a1;
+                document.getElementById("a2").innerText = traducoes[idioma].a2;
+                document.getElementById("a3").innerText = traducoes[idioma].a3;
+                document.getElementById("t21").innerText = traducoes[idioma].t21;
+                document.getElementById("f0").innerText = traducoes[idioma].f0;
+                document.getElementById("f1").innerText = traducoes[idioma].f1;
+                document.getElementById("f2").innerText = traducoes[idioma].f2;
+                document.getElementById("f3").innerText = traducoes[idioma].f3;
+                document.getElementById("f4").innerText = traducoes[idioma].f4;
+            }
+
+
+                    
+
+                </script>
+             </div>
+        </footer>
+    </body>
+</html>

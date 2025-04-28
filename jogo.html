@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo - Vanguardas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4B0E0E;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 45%;
+            padding: 20px;
+            border: 2px solid #8e1a1a;
+            border-radius: 10px;
+            background-color: #fff;
+            height: 450px;
+
+        }
+
+        .item {
+            margin: 10px;
+            border-radius: 5px;
+            cursor: grab;
+            width: 110px;
+        }
+
+        /* .item.correct {
+            background-color: #8bc34a;
+            border: 2px solid #4caf50;
+        } */
+
+        .item-container {
+            float:left;
+            margin-right: 1%;
+            height: 140px;
+            width: 140px;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: #d5d4d6;
+            text-align: center;
+            position: relative;
+}
+
+        .item-container h4 {
+            margin-top: 20px;
+            color: #8e1a1a;
+        }
+
+        .scoreboard, .timer {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .draggable-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Jogo das Vanguardas</h2>
+
+<div class="game-container">
+   
+    <div class="container">
+        <h3>Arraste para Associar</h3>
+        <div class="draggable-wrapper" id="image-area">
+            <div class="item" draggable="true" data-movement="Cubismo">
+                <img src="img9.png" alt="Cubismo" id="Cubismo">
+            </div>
+            <div class="item" draggable="true" data-movement="Dadaísmo">
+                <img src="img30.png" alt="Dadaísmo" id="Dadaísmo">
+            </div>
+            <div class="item" draggable="true" data-movement="Surrealismo">
+                <img src="img22.png" alt="Surrealismo" id="Surrealismo">
+            </div>
+            <div class="item" draggable="true" data-movement="Expressionismo">
+                <img src="img3.png" alt="Expressionismo" id="Expressionismo">
+            </div>
+            <div class="item" draggable="true" data-movement="Futurismo">
+                <img src="img18.png" alt="Futurismo" id="Futurismo">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <h3>Associações</h3>
+        <div class="item-container dropzone" data-accept="Futurismo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h4 id="h4_Futurismo">Futurismo</h4>
+        </div>
+        <div class="item-container dropzone" data-accept="Cubismo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h4 id="h4_Cubismo">Cubismo</h4>
+        </div>
+        <div class="item-container dropzone" data-accept="Surrealismo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h4 id="h4_Surrealismo">Surrealismo</h4>
+        </div>
+        <div class="item-container dropzone" data-accept="Dadaísmo" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+            <h4 id="h4_Dadaísmo">Dadaísmo</h4>
+        </div>
+        <div class="item-container dropzone" data-accept="Expressionismo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h4 id="h4_Expressionismo">Expressionismo</h4>
+        </div>
+    </div>
+</div>
+
+
+<div class="scoreboard">Pontuação: <span id="score">0</span></div>
+<div class="timer">Tempo restante: <span id="timer">60</span> segundos</div>
+
+
+<script>
+    let score = 0;
+    let timeLeft = 60;
+    let timer;
+    let draggedItem = null;
+    let originalParent = null;
+
+    function startTimer() {
+        timer = setInterval(() => {
+            timeLeft--;
+            document.getElementById('timer').textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                alert("Tempo esgotado! Sua pontuação final foi: " + score);
+            }
+        }, 1000);
+    }
+
+    startTimer();
+
+    function dragStart(e) {
+        draggedItem = e.target.closest(".item");
+        originalParent = draggedItem.parentNode;
+        e.dataTransfer.setData("text/plain", draggedItem.dataset.movement);
+    }
+
+    function allowDrop(e) {
+        e.preventDefault();
+    }
+
+    function drop(e) {
+        e.preventDefault();
+
+        const dropzone = e.currentTarget;
+        const accept = dropzone.getAttribute("data-accept");
+        const movement = draggedItem.dataset.movement;
+
+        //correto
+        if (accept === movement) {
+            dropzone.appendChild(draggedItem);
+            draggedItem.classList.add("correct");
+
+            //altera o tamanho da imagem
+            document.getElementById(movement).style.height = "70px";
+            document.getElementById(movement).style.padding = "0px";
+            document.getElementById(movement).style.margin = "0px";
+            document.getElementById(movement).style.width = "";
+
+            //altera a cor do texto h4
+            document.getElementById("h4_"+movement).style.color = "green";
+           
+
+            draggedItem.setAttribute("draggable", "false");
+            score += 10;
+            document.getElementById("score").textContent = score;
+        } else {
+            originalParent.appendChild(draggedItem); 
+        }
+    }
+
+    document.querySelectorAll(".item").forEach(item => {
+        item.addEventListener("dragstart", dragStart);
+    });
+</script>
+
+</body>
+</html>

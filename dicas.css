@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #4b0e0e;
+}
+.app{
+    background: #fff;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app h1{
+    font-size: 25px;
+    font-weight: 600;
+    color:#4b0e0e;
+    border-bottom: 1px solid #333;
+    padding-bottom:30px;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+  font-size: 18px;
+  color: #4b0e0e;
+  font-weight:600;
+}
